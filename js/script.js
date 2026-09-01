@@ -45,9 +45,14 @@ const navLinks = document.querySelectorAll(".nav-link");
 // MOBILE SIDEBAR
 // ================================
 
+const sidebarOverlay = document.getElementById("sidebarOverlay");
+
+
 menuToggle.addEventListener("click", function () {
 
     sidebar.classList.add("show-sidebar");
+
+    sidebarOverlay.classList.add("show-overlay");
 
 });
 
@@ -55,6 +60,17 @@ menuToggle.addEventListener("click", function () {
 sidebarClose.addEventListener("click", function () {
 
     sidebar.classList.remove("show-sidebar");
+
+    sidebarOverlay.classList.remove("show-overlay");
+
+});
+
+
+sidebarOverlay.addEventListener("click", function () {
+
+    sidebar.classList.remove("show-sidebar");
+
+    sidebarOverlay.classList.remove("show-overlay");
 
 });
 
